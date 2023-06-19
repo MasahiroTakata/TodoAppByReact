@@ -12,7 +12,7 @@ export const useMemoList = () => {
     },
     [memos]
   );
-  const onClickDelete = useCallback(
+  const deleteTodo = useCallback(
     (index: number) => {
       const newMemos = [...memos]; // 配列の宣言
       newMemos.splice(index, 1); // 第一引数は、削除する要素番号、第二引数は削除する要素の数
@@ -20,5 +20,5 @@ export const useMemoList = () => {
     },
     [memos]
   );
-  return { memos, addTodo, onClickDelete };
+  return { memos, addTodo, deleteTodo };
 };
